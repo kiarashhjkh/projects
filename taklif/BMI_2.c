@@ -34,6 +34,7 @@ int main() {
                 printf("give me the new information : \n");
                 scanf("%f %f", &wei, &hei);
                 BMI = wei / (hei * hei);
+                break;
         }
         scanf("%d", &choice);
     }
