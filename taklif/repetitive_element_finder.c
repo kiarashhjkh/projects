@@ -10,9 +10,19 @@ int main() {
         scanf(" %d", &myArray[i]);
     }
     for (int i = 0; i < arraySize; i++) {
+        int alreadyPrinted = 0;
+        for (int k = 0; k < i; k++) {
+            if (myArray[i] == myArray[k]) {
+                alreadyPrinted = 1;
+                break;
+            }
+        }
+        if (alreadyPrinted == 1) {
+            continue;
+        }
         for (int j = i + 1; j < arraySize; j++) {
             if (myArray[i] == myArray[j]) {
-                printf("%d ", myArray[i]);
+                printf("%d ", myArray[j]);
                 dupCheck++;
                 break;
             }
