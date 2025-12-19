@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
     float x, y;
@@ -32,7 +31,18 @@ int main() {
                 printf("1.add\n2.subtraction\n3.multiplication\n4.division\n5.power\n6.factorial\n7.exit\n");
                 break;
             case 5:
-                printf("%.2f\n", pow(x, y));
+                float temp =1;
+                int temp2=y;
+                if (temp2<0) {
+                    temp2=-temp2;
+                    x = 1/x;
+                }else {
+                    while (temp2>0) {
+                        temp*=x;
+                        temp2--;
+                    }
+                }
+                printf("%.2f",temp);
                 break;
             case 6:
                 if (x < 0) {
