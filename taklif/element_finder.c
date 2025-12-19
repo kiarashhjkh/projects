@@ -1,4 +1,14 @@
 #include <stdio.h>
+void find(int myArray[],int target,int arraySize) {
+    for (int i = 0; i < arraySize; i++) {
+
+        if (myArray[i] == target) {
+            printf("index number of %d", i);
+            break;
+        }
+        if (i == arraySize-1 ) { printf("-1");}
+    }
+}
 
 int main() {
     int arraySize;
@@ -7,17 +17,12 @@ int main() {
     scanf(" %d", &arraySize);
     int myArray[arraySize];
     for (int i = 0; i < arraySize; i++) {
-        printf("%d element is : \n", i + 1);
+        printf("element %d  is : \n", i + 1);
         scanf(" %d", &myArray[i]);
     }
     printf("what number do you wanna find : \n");
     scanf(" %d", &target);
-    for (int i = 0; i < arraySize; i++) {
-        if (myArray[i] == target) {
-            printf("index number of %d", i);
-            break;
-        }
-            if (i == arraySize-1 ) { printf("-1");}
-    }
+    find(myArray,target,arraySize);
+
     return 0;
 }
