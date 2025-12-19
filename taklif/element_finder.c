@@ -1,7 +1,6 @@
 #include <stdio.h>
 void find(int myArray[],int target,int arraySize) {
     for (int i = 0; i < arraySize; i++) {
-
         if (myArray[i] == target) {
             printf("index number of %d", i);
             break;
