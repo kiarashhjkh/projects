@@ -1,5 +1,6 @@
 #include <stdio.h>
-void find(int myArray[],int target,int arraySize) {
+void find(int myArray[],int target) {
+    int arraySize = sizeof(myArray)/4;
     for (int i = 0; i < arraySize; i++) {
         if (myArray[i] == target) {
             printf("index number of %d", i);
@@ -21,7 +22,7 @@ int main() {
     }
     printf("what number do you wanna find : \n");
     scanf(" %d", &target);
-    find(myArray,target,arraySize);
+    find(myArray,target);
 
     return 0;
 }
