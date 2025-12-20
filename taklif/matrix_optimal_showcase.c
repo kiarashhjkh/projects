@@ -2,7 +2,6 @@
 
 int main() {
     int row, column, zeroCounter = 0;
-    int nonZeroHolder[];
     printf("number of rows :");
     scanf(" %d", &row);
     printf("number of columns :");
