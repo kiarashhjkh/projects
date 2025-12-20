@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void find(int myArray[],int target) {
     int arraySize = sizeof(myArray)/4;
     for (int i = 0; i < arraySize; i++) {

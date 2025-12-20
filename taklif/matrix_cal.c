@@ -20,13 +20,13 @@ int main() {
                 scanf(" %d %d", &matrix2row, &matrix2column);
                 for (int i = 0; i < matrix1row; i++) {
                     for (int j = 0; j < matrix1column; j++) {
-                        printf("row %d  column %d of your first matrix is :", i + 1, j + 1);
+                        printf("row %d column %d of your first matrix is :", i + 1, j + 1);
                         scanf(" %d", &matrix1[i][j]);
                     }
                 }
                 for (int i = 0; i < matrix2row; i++) {
                     for (int j = 0; j < matrix2column; j++) {
-                        printf("row %d  column %d of your second matrix is :", i + 1, j + 1);
+                        printf("row %d column %d of your second matrix is :", i + 1, j + 1);
                         scanf(" %d", &matrix2[i][j]);
                     }
                 }

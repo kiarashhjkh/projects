@@ -7,7 +7,7 @@ int main() {
     scanf(" %d",&arraySize);
     int myArray[arraySize];
     for (int i = 0;i<arraySize;i++) {
-        printf("%d element is : \n",i+1);
+        printf("element %d is : \n",i+1);
         scanf(" %d",&myArray[i]);
     }
     for (int i =0;i<arraySize;i++) {

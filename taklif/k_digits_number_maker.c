@@ -37,8 +37,8 @@ int main() {
             valid = 0;
         }
         if (valid == 1) {
-            if (starter == 1) { printf("%d", i); } else { printf("-%d",i); }
-            starter=0;
+            if (starter == 1) { printf("%d", i); } else { printf("-%d", i); }
+            starter = 0;
         }
     }
     return 0;

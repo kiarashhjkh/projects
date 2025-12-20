@@ -2,11 +2,13 @@
 
 int main() {
     int row, column, zeroCounter = 0;
-    printf("row size :");
+    int nonZeroHolder[];
+    printf("number of rows :");
     scanf(" %d", &row);
-    printf("column size :");
+    printf("number of columns :");
     scanf(" %d", &column);
     int matrix[row][column];
+    printf("enter the elements of the matrix : \n");
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             printf("[%d][%d] :", i, j);

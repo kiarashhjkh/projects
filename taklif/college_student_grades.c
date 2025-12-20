@@ -2,12 +2,12 @@
 
 int main() {
     int courseNumber;
-    float sum  = 0;
+    float sum = 0;
     printf("how many courses :");
     scanf("%d", &courseNumber);
     int courseGrades[courseNumber];
     for (int i = 0; i < courseNumber; i++) {
-        printf("course %d :",i+1);
+        printf("course %d :", i + 1);
         scanf(" %d", &courseGrades[i]);
     }
     int max = courseGrades[0], min = courseGrades[0];
@@ -21,12 +21,12 @@ int main() {
             min = courseGrades[i];
         }
     }
-    for (int i = 0;i<courseNumber;i++) {
+    for (int i = 0; i < courseNumber; i++) {
         sum += courseGrades[i];
     }
-    for (int i = 0; i<courseNumber;i++) {
+    for (int i = 0; i < courseNumber; i++) {
         float temp = courseGrades[i];
-        printf("Course %d | Grade: %d | ",i+1,courseGrades[i]);
+        printf("Course %d | Grade: %d | ", i + 1, courseGrades[i]);
         while (temp >= 5) {
             printf("*");
             temp -= 5;
@@ -41,8 +41,8 @@ int main() {
         }
         printf("\n");
     }
-    printf("Average Grade : %.2f\n",(sum/courseNumber));
-    printf("Highest Grade : %d\n",max);
-    printf("Lowest Grade : %d\n",min);
+    printf("Average Grade : %.2f\n", (sum / courseNumber));
+    printf("Highest Grade : %d\n", max);
+    printf("Lowest Grade : %d\n", min);
     return 0;
 }
