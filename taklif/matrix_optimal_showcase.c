@@ -17,25 +17,24 @@ int main() {
             }
         }
     }
-    int nonZeroHolder[nonZeroCounter];
+    int nonZeroHolder[nonZeroCounter][3];
     int temp = 0;
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             if (matrix[i][j] != 0) {
-                nonZeroHolder[temp]=matrix[i][j];
+                nonZeroHolder[temp][0] = i;
+                nonZeroHolder[temp][1] = j;
+                nonZeroHolder[temp][2] = matrix[i][j];
                 temp++;
             }
         }
     }
-    temp = 0;
-    printf("%d %d %d \n",row,column,nonZeroCounter);
-    for (int i = 0; i < row; i++) {
-        for (int j = 0; j < column; j++) {
-            if (matrix[i][j] != 0) {
-                printf("%d %d %d\n",i,j,nonZeroHolder[temp]);
-                temp++;
-            }
+    printf("%d %d %d\n", row, column, nonZeroCounter);
+    for (int i = 0; i < nonZeroCounter; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", nonZeroHolder[i][j]);
         }
+        printf("\n");
     }
     return 0;
 }
