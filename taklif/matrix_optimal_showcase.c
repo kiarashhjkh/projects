@@ -18,7 +18,10 @@ int main() {
         }
     }
     int nonZeroHolder[nonZeroCounter][3];
-    int temp = 0;
+    nonZeroHolder[0][0] = row;
+    nonZeroHolder[0][1] = column;
+    nonZeroHolder[0][2] = nonZeroCounter;
+    int temp = 1;
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             if (matrix[i][j] != 0) {
@@ -29,8 +32,7 @@ int main() {
             }
         }
     }
-    printf("%d %d %d\n", row, column, nonZeroCounter);
-    for (int i = 0; i < nonZeroCounter; i++) {
+    for (int i = 0; i <= nonZeroCounter; i++) {
         for (int j = 0; j < 3; j++) {
             printf("%d ", nonZeroHolder[i][j]);
         }
