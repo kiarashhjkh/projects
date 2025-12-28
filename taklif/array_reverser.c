@@ -1,22 +1,37 @@
 #include <stdio.h>
 
-int main() {
-    int arraySize;
-    printf("give me the size of your array : \n");
-    scanf(" %d", &arraySize);
-    int myArray[arraySize];
-    for (int i = 0; i < arraySize; i++) {
-        printf("element %d is : \n", i + 1);
-        scanf(" %d", &myArray[i]);
-    }
-    for (int i = 0; i < arraySize; i++) {
-        printf("%d  ", myArray[i]);
-        if (i == arraySize - 1) {
+void reverseArray(int Array[],int length) {
+    int temp = 0;
+    printf("Before reverse :");
+    for (int i = 0;i < length ;i++) {
+        printf("%d ",Array[i]);
+        if (i == length - 1) {
             printf("\n");
         }
     }
-    for (int i = arraySize - 1;i >= 0;i--) {
-        printf("%d  ",myArray[i]);
+    for (int i = 0; i < length / 2 ; i++) {
+        temp = Array[i];
+        Array[i]=Array[length-i-1];
+        Array[length-i-1]= temp;
     }
-        return 0;
+    printf("After reverse :");
+    for (int i = 0; i<length ;i++) {
+        printf("%d ",Array[i]);
+        if (i == length - 1) {
+            printf("\n");
+        }
+    }
+}
+
+int main() {
+    int length;
+    printf("length of your array :");
+    scanf(" %d",&length);
+    int myArray[length];
+    for (int i = 0;i < length;i++ ) {
+        printf("[%d]:",i);
+        scanf(" %d",&myArray[i]);
+    }
+    reverseArray(myArray,length);
+    return 0;
 }
