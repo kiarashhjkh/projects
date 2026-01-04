@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+
 
 void snakeMovement(char *movement) {
     int matrix[2][8] = {{0}, {0}};
