@@ -8,34 +8,29 @@ int str_len(char *string) {
     return i;
 }
 
+int str_cmp(char *str1, char *str2) {
+    if (str_len(str1) != str_len(str2)) {
+        return 0;
+    }
+    for (int i = 0; str1[i] != '\0'; i++) {
+        if (str1[i] != str2[i]) {
+            return 0;
+        }
+    }
+    return 1;
+}
 
 int getPoint(char *string) {
-    switch (string[0]) {
-        case 'w':
-            return 0;
-        case 'r':
-            return 1;
-        case 'y':
-            return 2;
-        case 'g':
-            return 3;
-        case 'b':
-            if (string[str_len(string) - 1] == 'n') {
-                return 4;
-            }
-            if (string[str_len(string) - 1] == 'e') {
-                return 5;
-            }
-            if (string[str_len(string) - 1] == 'k') {
-                return 7;
-            }
-        case 'p':
-            return 6;
-        case 'm':
-            return 0;
-        default:
-            return -1;
-    }
+    if (str_cmp(string, "white") == 1) { return 0; }
+    if (str_cmp(string, "miss") == 1) { return 0; }
+    if (str_cmp(string, "red") == 1) { return 1; }
+    if (str_cmp(string, "yellow") == 1) { return 2; }
+    if (str_cmp(string, "green") == 1) { return 3; }
+    if (str_cmp(string, "brown") == 1) { return 4; }
+    if (str_cmp(string, "blue") == 1) { return 5; }
+    if (str_cmp(string, "pink") == 1) { return 6; }
+    if (str_cmp(string, "black") == 1) { return 7; }
+    return -1;
 }
 
 
